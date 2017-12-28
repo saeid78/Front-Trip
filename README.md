@@ -22,5 +22,5 @@ npm i
 ```
 
 
-This the is Fron-end part of trip finder project "https://github.com/saeid78/travelling-".
+This  is the Fron-end part of trip finder project "https://github.com/saeid78/travelling-".
 # Front-Trip
