@@ -3,27 +3,23 @@
  <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-
-          <li>
-            <router-link to="/login">
-            Login
+       
+            <router-link tag="li" to="/login"  v-if="! isAuth">
+           <a> Login</a>
             </router-link>
-            <router-link to="/register">
-            Register
+            <router-link tag="li" to="/register" v-if="! isAuth">
+            <a>Register</a>
             </router-link>
-          </li>
-          <li>
-          <router-link to="/feed">
-            Airport
+        
+          <router-link  tag="li" to="/feed" v-if="isAuth">
+            <a>Airport</a>
             </router-link>
-            </li>
-             <li role="presentation">
-          <router-link to="/trip">
-            Trip
+              
+          <router-link tag="li" to="/trip" v-if="isAuth">
+           <a> Trip </a>
             </router-link>
-            </li>
-             
-             
+              
+            
           </ul>
         </nav>
         <h3 class="text-muted">Trip</h3>
@@ -31,12 +27,25 @@
 </template>
 
 <script>
- 
+  
+  export default {
+    data() {
+      return {
+        isAuth:null
+      }
+    },
+    created () {
+      this.isAuth = this.$auth.isAuthenticated()
+    }
+  }
 
 </script>
 
 
 <style>
 
+li a {
+  margin-left:1em;
+}
 
 </style>
