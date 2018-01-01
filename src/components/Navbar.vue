@@ -18,6 +18,10 @@
           <router-link tag="li" to="/trip" v-if="isAuth">
            <a> Trip </a>
             </router-link>
+
+            <router-link  tag="li" to="/create" v-if="isAuth">
+            <a>Create Trip</a>
+            </router-link>
               
             
           </ul>

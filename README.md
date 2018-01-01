@@ -22,5 +22,5 @@ npm i
 ```
 
 
-This  is the Back-end part of trip finder project "https://github.com/saeid78/travelling-".
+This  is the Back-end part of trip finder project "https://github.com/saeid78/Trip-Finder".
  
