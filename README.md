@@ -20,6 +20,9 @@ npm run build --report
 # Add the nodes modules
 npm i
 ```
+## Update the Oauth_client secret for Authentication in the Login Component:
+Once the laravel db is up and running , we need to update the client_secret field inside of our data function simply by copy one of the secret token from 
+laravel db and pass it in.
 
 
 This  is the Back-end part of trip finder project "https://github.com/saeid78/Trip-Finder".

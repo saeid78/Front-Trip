@@ -76,13 +76,14 @@
                     this.$router.push('/trip')
                 })
             }
-        },
-        created () {
-            this.$http.get('api/airports')
-            .then(response => {
-                this.airports = response.body
-            })
         }
+        // ,
+        // created () {
+        //     this.$http.get('api/airports')
+        //     .then(response => {
+        //         this.airports = response.body
+        //     })
+        // }
     }
 </script>
 
