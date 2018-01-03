@@ -22,6 +22,10 @@
             <router-link  tag="li" to="/create" v-if="isAuth">
             <a>Create Trip</a>
             </router-link>
+
+            <router-link  tag="li" to="" v-if="isAuth">
+            <a>Log out</a>
+            </router-link>
               
             
           </ul>
@@ -40,6 +44,18 @@
     },
     created () {
       this.isAuth = this.$auth.isAuthenticated()
+
+      this.setAuthenticatedUser()
+    },
+    methods: {
+          setAuthenticatedUser () {
+              this.$http.get('api/user')
+              .then(response => {
+                this.$auth.setAuthenticatedUser(response.body)
+
+                console.log(this.$auth.getAuthenticatedUser())
+              })
+          }
     }
   }
 
